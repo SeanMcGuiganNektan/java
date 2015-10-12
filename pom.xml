@@ -56,7 +56,7 @@
               <license>Trucks Ltd</license>
               <group>Application/Collectors</group>
               <name>trucks</name>
-              <version>${version}-${build.id}</version>
+              <version>${project.version}-${build.id}</version>
               <defaultFilemode>0644</defaultFilemode>
               <defaultDirmode>0755</defaultDirmode>
               <defaultGroupname>root</defaultGroupname>
