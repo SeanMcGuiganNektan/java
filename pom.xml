@@ -6,7 +6,9 @@
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>trucks Maven Webapp</name>
+  
   <url>http://maven.apache.org</url>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,7 +17,72 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  
+
+  <profiles>
+    <profile>
+      <id>generate-rpm</id>
+
+      <activation>
+        <property>
+          <name>pkgtype</name>
+          <value>rpm</value>
+        </property>
+      </activation>
+
+      <build>
+
+        <finalName>trucks</finalName>
+
+        <plugins>
+
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>rpm-maven-plugin</artifactId>
+            <version>2.1.4</version>
+
+            <executions>
+              <execution>
+                <id>attach-rpm</id>
+                <goals>
+                  <goal>attached-rpm</goal>
+                </goals>
+              </execution>
+            </executions>
+
+
+            <configuration>
+              <license>Trucks Ltd</license>
+              <group>Application/Collectors</group>
+              <name>trucks</name>
+              <version>${version}-${build.id}</version>
+              <defaultFilemode>0644</defaultFilemode>
+              <defaultDirmode>0755</defaultDirmode>
+              <defaultGroupname>root</defaultGroupname>
+              <defaultUsername>root</defaultUsername>
+
+              <mappings>
+                <mapping>
+                  <directory>/usr/share/tomcat/webapps/trucks</directory>
+                  <sources>
+                    <source>
+                      <location>target/</location>
+                    </source>
+                  </sources>
+                </mapping>
+              </mappings>
+
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+     </profile>
+    
+  </profiles>
+
   <build>
     <finalName>trucks</finalName>
   </build>
+
 </project>
