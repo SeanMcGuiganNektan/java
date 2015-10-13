@@ -82,3 +82,28 @@
     <finalName>trucks-${buildid}</finalName>
 </build>
 </project>
+
+<!--
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>wagon-maven-plugin</artifactId>
+            <version>1.0-beta-4</version>
+            <executions>
+              <execution>
+                <id>upload-rpm</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>upload</goal>
+                </goals>
+                <configuration>
+                  <serverid>reposerver01</serverid>
+                  <fromDir>target/rpm/nektan-helloworld/RPMS/noarch</fromDir>
+                  <includes>*.rpm</includes>
+                  <excludes></excludes>
+                  <url>scp://uatrepo.platform.nektan.com</url>
+                  <toDir>var/www/html/uatrepo.platform.nektan.com/qarelease-rpm</toDir>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>   
+-->
