@@ -55,7 +55,7 @@
                 <license>Nektan Ltd</license>
                 <group>Application/Collectors</group>
                 <name>trucks</name>
-                <version>5-5-${buildid}</version>
+                <version>1.0.0-${buildid}</version>
                 <defaultFilemode>0644</defaultFilemode>
                 <defaultDirmode>0755</defaultDirmode>
                 <defaultGroupname>root</defaultGroupname>
