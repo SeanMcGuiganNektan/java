@@ -100,7 +100,7 @@
                   <fromDir>target/rpm/trucks/RPMS/noarch</fromDir>
                   <includes>*.rpm</includes>
                   <excludes></excludes>
-                  <url>scp://rpm-repo.com</url>
+                  <url>scp://rpm-repo.platform.nektan.com</url>
                   <toDir>var/www/html/uatrepo.platform.nektan.com/qarelease-rpm</toDir>
                 </configuration>
               </execution>
