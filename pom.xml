@@ -101,7 +101,7 @@
                   <includes>*.rpm</includes>
                   <excludes></excludes>
                   <url>scp://rpm-repo.platform.nektan.com</url>
-                  <toDir>var/www/html/uatrepo.platform.nektan.com/qarelease-rpm</toDir>
+                  <toDir>/var/www/html/rpms/</toDir>
                 </configuration>
               </execution>
             </executions>
