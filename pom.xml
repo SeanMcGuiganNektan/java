@@ -97,10 +97,10 @@
                 </goals>
                 <configuration>
                   <serverid>reposerver01</serverid>
-                  <fromDir>target/rpm/nektan-helloworld/RPMS/noarch</fromDir>
+                  <fromDir>target/rpm/trucks/RPMS/noarch</fromDir>
                   <includes>*.rpm</includes>
                   <excludes></excludes>
-                  <url>scp://uatrepo.platform.nektan.com</url>
+                  <url>scp://rpm-repo.com</url>
                   <toDir>var/www/html/uatrepo.platform.nektan.com/qarelease-rpm</toDir>
                 </configuration>
               </execution>
