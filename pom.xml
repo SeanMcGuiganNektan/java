@@ -63,7 +63,7 @@
 
                    <mappings>
                       <mapping>
-                         <directory>/tmp</directory>
+                         <directory>>/usr/share/tomcat/webapps/trucks</directory>
                             <sources>
                                <source> 
                                   <location>target/trucks-${buildid}</location>
