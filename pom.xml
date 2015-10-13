@@ -59,20 +59,24 @@
                 <defaultGroupname>root</defaultGroupname>
                 <defaultUsername>root</defaultUsername>
 
-             <mappings>
-                <mapping>
-                   <directory>/tmp</directory>
-                      <sources>
-                         <source> 
-                            <location>target/trucks</location>
-                         </source> 
-                     </sources>
-                </mapping>
-             </mappings>
-          </configuration>
+                   <mappings>
+                      <mapping>
+                         <directory>/tmp</directory>
+                            <sources>
+                               <source> 
+                                  <location>target/trucks</location>
+                              </source> 
+                            </sources>
+                      </mapping>
+                   </mappings>
+                   
+             </configuration>
           </plugin>
        </plugins>
     </build>
 </profile>
 </profiles>
+<build>
+    <finalName>trucks</finalName>
+</build>
 </project>
