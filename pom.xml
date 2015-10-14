@@ -78,6 +78,14 @@
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>wagon-maven-plugin</artifactId>
             <version>1.0-beta-4</version>
+            
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+              </dependency>
+            </dependencies>
+            
             <executions>
               <execution>
                 <id>upload-rpm</id>
