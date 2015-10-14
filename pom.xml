@@ -45,6 +45,7 @@
             </activation>
 
    <build>
+      <finalName>trucks-${buildid}</finalName>
        <plugins>
           <plugin>
              <groupId>org.codehaus.mojo</groupId>
@@ -103,14 +104,10 @@
                   <toDir>/var/www/html/rpms/</toDir>
                 </configuration>
               </execution>
-            </executions>
+           </executions>
          </plugin>
        </plugins>
      </build>
    </profile>
-
-   <build>
-      <finalName>trucks-${buildid}</finalName>
-   </build>
   </profiles>
 </project>
