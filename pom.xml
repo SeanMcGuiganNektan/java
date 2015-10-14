@@ -74,6 +74,28 @@
                    
              </configuration>
           </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>wagon-maven-plugin</artifactId>
+            <version>1.0-beta-4</version>
+            <executions>
+              <execution>
+                <id>upload-rpm</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>upload</goal>
+                </goals>
+                <configuration>
+                  <serverid>rpm-repo.platform.nektan.com</serverid>
+                  <fromDir>target/rpm/trucks/RPMS/noarch</fromDir>
+                  <includes>*.rpm</includes>
+                  <excludes></excludes>
+                  <url>scp://rpm-repo.platform.nektan.com</url>
+                  <toDir>/var/www/html/rpms/</toDir>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>  
        </plugins>
     </build>
 </profile>
