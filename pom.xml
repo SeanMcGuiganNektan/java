@@ -81,8 +81,8 @@
                       </mapping>
                    </mappings>
               </configuration>
-           </plugin>
-         <plugin>
+          </plugin>
+          <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>wagon-maven-plugin</artifactId>
             <version>1.0-beta-4</version>
@@ -105,11 +105,12 @@
               </execution>
             </executions>
          </plugin>
-      </plugins>
-    </build>
-    </profile>
-<build>
-    <finalName>trucks-${buildid}</finalName>
-</build>
-</profiles>
+       </plugins>
+     </build>
+   </profile>
+
+   <build>
+      <finalName>trucks-${buildid}</finalName>
+   </build>
+  </profiles>
 </project>
