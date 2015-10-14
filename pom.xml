@@ -81,7 +81,7 @@
             
             <dependencies>
               <dependency>
-                <groupId>org.apache.maven.wagon</groupId>
+                <groupId>org.codehaus.mojo</groupId>
                 <artifactId>wagon-ssh</artifactId>
               </dependency>
             </dependencies>
