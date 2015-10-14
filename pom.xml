@@ -24,6 +24,16 @@
        </dependency>
    </dependencies>
    
+   <build>   
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh</artifactId>
+        <version>1.0</version>
+      </extension>
+    </extensions>  
+  </build>
+  
    <profiles>
       <profile>
           <id>generate-rpm</id>
@@ -74,23 +84,12 @@
                    
              </configuration>
           </plugin>
-          <!--
+   
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>wagon-maven-plugin</artifactId>
             <version>1.0-beta-4</version>
-            
-            
-            <dependencies>
-                <dependency>
-                      <groupId>org.apache.maven.wagon</groupId>
-                      <artifactId>wagon</artifactId>
-                      <version>2.10</version>
-                      <type>pom</type>
-                </dependency>
-            </dependencies>
-            
-            
+         
             <executions>
               <execution>
                 <id>upload-rpm</id>
@@ -109,7 +108,7 @@
               </execution>
             </executions>
           </plugin>
-          -->
+      
        </plugins>
     </build>
 </profile>
