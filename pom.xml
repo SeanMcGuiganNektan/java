@@ -108,8 +108,8 @@
       </plugins>
     </build>
     </profile>
-  </profiles>
 <build>
     <finalName>trucks-${buildid}</finalName>
 </build>
+</profiles>
 </project>
